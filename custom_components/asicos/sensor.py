@@ -249,14 +249,14 @@ SENSOR_DESCRIPTIONS: tuple[AsicOSSensorEntityDescription, ...] = (
         translation_key="best_diff_session",
         name="Best Diff Session",
         icon="mdi:trophy",
-        value_fn=lambda d: d.get("mining", {}).get("session_best_diff"),
+        value_fn=lambda d: round(d.get("mining", {}).get("session_best_diff", 0)),
     ),
     AsicOSSensorEntityDescription(
         key="best_diff_alltime",
         translation_key="best_diff_alltime",
         name="Best Diff All-Time",
         icon="mdi:trophy-award",
-        value_fn=lambda d: d.get("mining", {}).get("alltime_best_diff"),
+        value_fn=lambda d: round(d.get("mining", {}).get("alltime_best_diff", 0)),
     ),
     AsicOSSensorEntityDescription(
         key="hw_errors",
