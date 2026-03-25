@@ -292,7 +292,6 @@ SENSOR_DESCRIPTIONS: tuple[AsicOSSensorEntityDescription, ...] = (
         translation_key="uptime",
         name="Uptime",
         icon="mdi:clock-outline",
-        device_class=SensorDeviceClass.DURATION,
         value_fn=_format_uptime,
     ),
 )
