@@ -18,6 +18,7 @@ from homeassistant.const import (
     UnitOfElectricCurrent,
     UnitOfElectricPotential,
     UnitOfPower,
+    UnitOfTime,
     UnitOfTemperature,
 )
 from homeassistant.core import HomeAssistant
@@ -292,7 +293,10 @@ SENSOR_DESCRIPTIONS: tuple[AsicOSSensorEntityDescription, ...] = (
         translation_key="uptime",
         name="Uptime",
         icon="mdi:clock-outline",
-        value_fn=_format_uptime,
+        device_class=SensorDeviceClass.DURATION,
+        native_unit_of_measurement=UnitOfTime.SECONDS,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+        value_fn=lambda d: int(d.get("uptime_ms", 0) / 1000),
     ),
 )
 
