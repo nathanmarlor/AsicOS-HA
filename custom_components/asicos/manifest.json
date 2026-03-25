@@ -1,0 +1,11 @@
+{
+  "domain": "asicos",
+  "name": "AsicOS Bitcoin Miner",
+  "version": "1.0.0",
+  "documentation": "https://github.com/skot/AsicOS",
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "requirements": ["aiohttp"],
+  "codeowners": [],
+  "integration_type": "device"
+}

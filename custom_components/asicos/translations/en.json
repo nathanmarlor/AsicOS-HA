@@ -1,0 +1,34 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to AsicOS Miner",
+        "description": "Enter the IP address or hostname of your AsicOS Bitcoin miner.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP address or hostname of the miner (e.g. 192.168.1.100)"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure AsicOS Miner",
+        "description": "Update the IP address or hostname of your AsicOS Bitcoin miner.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP address or hostname of the miner (e.g. 192.168.1.100)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the miner. Please check the IP address and ensure the miner is online.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This miner is already configured.",
+      "reconfigure_successful": "Reconfiguration successful."
+    }
+  }
+}
